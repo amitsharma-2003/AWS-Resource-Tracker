@@ -19,7 +19,7 @@
 #Cron Job Schedule
 echo "Cron job ran at $(date)"
 #List EC2 instances
-echo "List of EC2 instances:"
+echo "List of EC2 instances after JSON Parsing by filtering the information:"
 aws ec2 describe-instances | jq '.Reservations[].Instances[].InstanceId'
 
 #List S3 Buckets
